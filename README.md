@@ -26,16 +26,16 @@ import { libertyCore } from 'liberty-core';
 const key = 'my-secret-key';
 const plainText = 'Hello, world!';
 
-// Create a protected string
-const cryptoMessage = libertyCore.message.create({
+// Encrypt a message
+const cryptoMessage = libertyCore.message.encrypt({
   message: plainText,
   key,
   noiseLength: 15,      // optional, defaults to 15
   clanPoint: 'myApp',   // optional marker inside the message
 });
 
-// Restore message
-const restored = libertyCore.message.restore({
+// Decrypt message
+const restored = libertyCore.message.decrypt({
   message: cryptoMessage,
   key,
   noiseLength: 15,
@@ -58,7 +58,7 @@ import { libertyCore, libertyHelpers } from 'liberty-core';
 const { asyncCall } = libertyHelpers;
 
 const res = await asyncCall(
-  libertyCore.message.restore,
+  libertyCore.message.decrypt,
   { message: cryptoMessage, key, noiseLength: 15 },
 );
 
