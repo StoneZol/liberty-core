@@ -1,0 +1,28 @@
+{
+    "name": "liberty-core",
+    "version": "0.1.0",
+    "description": "Small crypto core for messages and objects built on AES-CBC + HMAC with noise and fingerprints.",
+    "type": "module",
+    "main": "index.js",
+    "module": "index.js",
+    "types": "index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./index.js",
+            "require": "./index.js",
+            "types": "./index.d.ts"
+        }
+    },
+    "keywords": [
+        "crypto",
+        "aes",
+        "hmac",
+        "encryption",
+        "message",
+        "security"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "crypto-js": "^4.2.0"
+    }
+}
