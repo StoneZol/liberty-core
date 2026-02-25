@@ -11,7 +11,6 @@ export interface LibertyCrypto {
     generateNoise(length?: number, charset?: string): string;
     generateSalt(): string;
     hmac(message: string, key: string): string;
-    getVisualFingerprint(hashstr: string, count?: number): string;
     fingerprint: LibertyCryptoFingerprint;
 }
 

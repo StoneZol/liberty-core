@@ -134,7 +134,6 @@ export const crypto = {
     generateNoise: generateNoise,
     generateSalt: generateSalt,
     hmac: hmac,
-    getVisualFingerprint: getVisualFingerprint,
     fingerprint:{
         visual: getVisualFingerprint,
         char: getCharFingerprint,
